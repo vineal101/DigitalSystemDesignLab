@@ -1,0 +1,48 @@
+# do lab04_vs.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:51:41 on Oct 09,2024
+# vlog -work work lab04_vs.vo 
+# -- Compiling module Game
+# 
+# Top level modules:
+# 	Game
+# End time: 19:51:41 on Oct 09,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:51:41 on Oct 09,2024
+# vlog -work work Waveform4.vwf.vt 
+# -- Compiling module Game_vlg_sample_tst
+# -- Compiling module Game_vlg_check_tst
+# -- Compiling module Game_vlg_vec_tst
+# 
+# Top level modules:
+# 	Game_vlg_vec_tst
+# End time: 19:51:41 on Oct 09,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -do "lab04_vs.do" 
+# Start time: 19:51:41 on Oct 09,2024
+# Loading work.Game_vlg_vec_tst
+# Loading work.Game
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
+# Loading work.Game_vlg_sample_tst
+# Loading work.Game_vlg_check_tst
+# Loading altera_ver.PRIM_GDFF_LOW
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libpthread.so.0 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libdl.so.2 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libm.so.6 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/librt.so.1 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libc.so.6 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/ld-linux.so.2 : module was loaded at an absolute address.
+# Simulation passed !
+# ** Note: $finish    : Waveform4.vwf.vt(434)
+#    Time: 1 us  Iteration: 0  Instance: /Game_vlg_vec_tst/tb_out
+# End time: 19:51:41 on Oct 09,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 7

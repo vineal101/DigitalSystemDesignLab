@@ -1,0 +1,42 @@
+# do Lab1.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 15:57:23 on Sep 11,2024
+# vlog -work work Lab1.vo 
+# -- Compiling module Lab1
+# 
+# Top level modules:
+# 	Lab1
+# End time: 15:57:23 on Sep 11,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 15:57:23 on Sep 11,2024
+# vlog -work work Waveform.vwf.vt 
+# -- Compiling module Lab1_vlg_sample_tst
+# -- Compiling module Lab1_vlg_check_tst
+# -- Compiling module Lab1_vlg_vec_tst
+# 
+# Top level modules:
+# 	Lab1_vlg_vec_tst
+# End time: 15:57:23 on Sep 11,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -do "Lab1.do" 
+# Start time: 15:57:23 on Sep 11,2024
+# Loading work.Lab1_vlg_vec_tst
+# Loading work.Lab1
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading work.Lab1_vlg_sample_tst
+# Loading work.Lab1_vlg_check_tst
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libpthread.so.0 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libdl.so.2 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libm.so.6 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/librt.so.1 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libc.so.6 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/ld-linux.so.2 : module was loaded at an absolute address.
+# Simulation passed !
+# ** Note: $finish    : Waveform.vwf.vt(151)
+#    Time: 1 us  Iteration: 0  Instance: /Lab1_vlg_vec_tst/tb_out
+# End time: 15:57:23 on Sep 11,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 7

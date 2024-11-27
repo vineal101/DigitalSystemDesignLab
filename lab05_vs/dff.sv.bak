@@ -1,0 +1,9 @@
+module d_ff (
+    input logic d,      // Data input
+    input logic clk,    // Clock input
+    output logic q      // Output
+);
+    always @(posedge clk) begin
+        q <= d;  // On the rising edge of the clock, capture the value of d
+    end
+endmodule

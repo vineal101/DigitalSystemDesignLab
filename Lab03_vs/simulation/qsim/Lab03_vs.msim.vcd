@@ -1,0 +1,112 @@
+$comment
+	File created using the following command:
+		vcd file Lab03_vs.msim.vcd -direction
+$end
+$date
+	Tue Sep 24 16:36:09 2024
+$end
+$version
+	ModelSim Version 10.3d
+$end
+$timescale
+	1ps
+$end
+
+$scope module Lab03_vs_vlg_vec_tst $end
+$var reg 1 ! A $end
+$var reg 1 " B $end
+$var reg 1 # C $end
+$var reg 1 $ D $end
+$var wire 1 % Sa $end
+$var wire 1 & Sb $end
+$var wire 1 ' Sc $end
+$var wire 1 ( Sd $end
+$var wire 1 ) Se $end
+$var wire 1 * Sf $end
+$var wire 1 + Sg $end
+$var wire 1 , sampler $end
+
+$scope module i1 $end
+$var wire 1 - gnd $end
+$var wire 1 . vcc $end
+$var wire 1 / unknown $end
+$var tri1 1 0 devclrn $end
+$var tri1 1 1 devpor $end
+$var tri1 1 2 devoe $end
+$var wire 1 3 Sa~output_o $end
+$var wire 1 4 Sb~output_o $end
+$var wire 1 5 Sc~output_o $end
+$var wire 1 6 Sd~output_o $end
+$var wire 1 7 Se~output_o $end
+$var wire 1 8 Sf~output_o $end
+$var wire 1 9 Sg~output_o $end
+$var wire 1 : D~input_o $end
+$var wire 1 ; B~input_o $end
+$var wire 1 < C~input_o $end
+$var wire 1 = A~input_o $end
+$var wire 1 > inst71~0_combout $end
+$var wire 1 ? inst72~0_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+0%
+0&
+0'
+0(
+0)
+0*
+1+
+x,
+0-
+1.
+x/
+10
+11
+12
+03
+04
+05
+06
+07
+08
+19
+0:
+0;
+0<
+0=
+0>
+1?
+$end
+#200000
+1!
+1"
+1#
+1$
+1=
+1;
+1<
+1:
+0,
+0?
+09
+0+
+#300000
+0!
+0"
+0#
+0$
+0=
+0;
+0<
+0:
+1,
+1?
+19
+1+
+#1000000

@@ -1,0 +1,29 @@
+module data_memory(
+	input logic clk,
+	input logic rst,
+	input logic [31:0] A,  	// address
+	input logic [31:0] WD, 	// write data
+	input logic WE,        	// write enable
+	output logic [31:0] RD,	// read data
+	output logic [31:0] prode  // probe for debugging
+);
+
+	logic [31:0] memory [0:255];
+
+	always_ff @(posedge clk or posedge rst) begin
+    	if (rst) begin
+        	for (int i = 0; i < 256; i++) begin
+            	memory[i] <= 32'h00000000;
+        	end
+    	end
+    	else if (WE) begin
+        	memory[A[7:0]] <= WD; 
+    	end
+	end
+
+	assign RD = memory[A[7:0]]; 
+	assign prode = memory[0];
+
+endmodule
+
+

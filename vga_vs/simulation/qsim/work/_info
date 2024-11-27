@@ -1,0 +1,90 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/user/Downloads/vga_vs/simulation/qsim
+vtop
+Z1 !s110 1732664805
+!i10b 1
+!s100 f>onHGlE<lbDn>8L_FXgf0
+IAI=R2bWS0JQC3@Qd]5=373
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+R0
+w1732664804
+8vga_vs.vo
+Fvga_vs.vo
+L0 32
+Z3 OV;L;10.3d;59
+r1
+!s85 0
+31
+!s108 1732664805.074264
+!s107 vga_vs.vo|
+!s90 -work|work|vga_vs.vo|
+!i113 1
+Z4 o-work work
+vtop_vlg_check_tst
+R1
+!i10b 1
+!s100 ;5C717BIYN]?f<9U?<<RC3
+IUIUoOND@A0e8i]IL38e]Y0
+R2
+R0
+Z5 w1732664802
+Z6 8fm.vwf.vt
+Z7 Ffm.vwf.vt
+L0 58
+R3
+r1
+!s85 0
+31
+Z8 !s108 1732664805.106679
+Z9 !s107 fm.vwf.vt|
+Z10 !s90 -work|work|fm.vwf.vt|
+!i113 1
+R4
+vtop_vlg_sample_tst
+R1
+!i10b 1
+!s100 HOleoHhFBZbaEQH`Y1m403
+IgEz0G7nd:5jXiXPZK^K1_0
+R2
+R0
+R5
+R6
+R7
+L0 30
+R3
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R4
+vtop_vlg_vec_tst
+R1
+!i10b 1
+!s100 FB@[2;;15Ag;[T4LX1^gn1
+Ii5@o@=DfG3daK[cdKGhRd2
+R2
+R0
+R5
+R6
+R7
+L0 717
+R3
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R4

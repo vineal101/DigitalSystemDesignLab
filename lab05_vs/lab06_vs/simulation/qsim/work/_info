@@ -1,0 +1,90 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/user/Downloads/lab06_vs/simulation/qsim
+vtop
+Z1 !s110 1731280796
+!i10b 1
+!s100 9SUDIbB>iCP5oUiNKaE@k3
+InQ:a[OR06IJ?D3eiS_j=`0
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+R0
+w1731280796
+8lab06_vs.vo
+Flab06_vs.vo
+L0 32
+Z3 OV;L;10.3d;59
+r1
+!s85 0
+31
+!s108 1731280796.942128
+!s107 lab06_vs.vo|
+!s90 -work|work|lab06_vs.vo|
+!i113 1
+Z4 o-work work
+vtop_vlg_check_tst
+Z5 !s110 1731280797
+!i10b 1
+!s100 f94Fa>j;81mF4bgVMhJGD1
+IAj?9i10D?2QILU0jf@bUf2
+R2
+R0
+Z6 w1731280794
+Z7 8waveform_top.vwf.vt
+Z8 Fwaveform_top.vwf.vt
+L0 62
+R3
+r1
+!s85 0
+31
+Z9 !s108 1731280796.985163
+Z10 !s107 waveform_top.vwf.vt|
+Z11 !s90 -work|work|waveform_top.vwf.vt|
+!i113 1
+R4
+vtop_vlg_sample_tst
+R1
+!i10b 1
+!s100 G<6?ii3Z<]jhPRJ;iNg2E0
+IFa^=]<18F63NWz`X=4:Jl3
+R2
+R0
+R6
+R7
+R8
+L0 30
+R3
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R4
+vtop_vlg_vec_tst
+R5
+!i10b 1
+!s100 aClezR4ZD`9ND3Rlk0eH?1
+I`IFWJSfTY<?21mghel9hj2
+R2
+R0
+R6
+R7
+R8
+L0 2600
+R3
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R4

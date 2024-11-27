@@ -1,0 +1,114 @@
+|game
+clk => clk.IN2
+n => n.IN1
+s => s.IN1
+e => e.IN1
+w => w.IN1
+reset => reset.IN2
+s0 << room:room_f.s0
+s1 << room:room_f.s1
+s2 << room:room_f.s2
+sw << sw.DB_MAX_OUTPUT_PORT_TYPE
+s3 << room:room_f.s3
+s4 << room:room_f.s4
+d << room:room_f.d
+s5 << room:room_f.s5
+win << room:room_f.win
+s6 << room:room_f.s6
+v << v.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|game|room:room_f
+clk => clk.IN7
+n => s1n.IN1
+n => s2n.IN1
+s => s2n.IN1
+s => s2n.IN0
+s => s4n.IN1
+s => s1n.IN1
+e => s1n.IN1
+e => s2n.IN1
+e => s2n.IN1
+e => s4n.IN1
+e => s0n.IN1
+e => s3n.IN1
+w => s0n.IN1
+w => s3n.IN1
+w => s1n.IN1
+w => s2n.IN1
+v => s6n.IN1
+v => s5n.IN1
+reset => s0n.IN1
+reset => s1n.IN1
+reset => s2n.IN1
+reset => s3n.IN1
+reset => s4n.IN1
+reset => s5n.IN1
+reset => s6n.IN1
+s0 <= d_ff:dff0.q
+s1 <= d_ff:dff1.q
+s2 <= d_ff:dff2.q
+sw <= d_ff:dff3.q
+s3 <= d_ff:dff3.q
+s4 <= d_ff:dff4.q
+d <= d_ff:dff5.q
+s5 <= d_ff:dff5.q
+win <= d_ff:dff6.q
+s6 <= d_ff:dff6.q
+
+
+|game|room:room_f|d_ff:dff0
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|game|room:room_f|d_ff:dff1
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|game|room:room_f|d_ff:dff2
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|game|room:room_f|d_ff:dff3
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|game|room:room_f|d_ff:dff4
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|game|room:room_f|d_ff:dff5
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|game|room:room_f|d_ff:dff6
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|game|sword:sword_f
+sw => state_d.IN1
+reset => state_d.OUTPUTSELECT
+clk => clk.IN1
+v <= d_ff:state_ff.q
+
+
+|game|sword:sword_f|d_ff:state_ff
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

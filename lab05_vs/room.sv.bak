@@ -1,0 +1,83 @@
+module room_fsm (
+    input logic clk,      // Clock signal
+    input logic reset,    // Reset signal
+    input logic n, s, e, w,  // Directional inputs
+    input logic v,        // Sword FSM output (indicating if the player has the sword)
+    output logic win,     // Output for Victory Vault (win state)
+    output logic d,       // Output for Grievous Graveyard (dead state)
+    output logic sw       // Output for Sword FSM when in Secret Sword Stash
+);
+
+    // One-hot encoding of room states
+    typedef enum logic [6:0] {
+        S0 = 7'b0000001,   // Cave of Cacophony
+        S1 = 7'b0000010,   // Twisty Tunnel
+        S2 = 7'b0000100,   // Rapid River
+        S3 = 7'b0001000,   // Secret Sword Stash
+        S4 = 7'b0010000,   // Dragon's Den
+        S5 = 7'b0100000,   // Victory Vault
+        S6 = 7'b1000000    // Grievous Graveyard
+    } room_state_t;
+
+    room_state_t current_state, next_state;
+
+    // Instantiate the D flip-flop to store the current room state
+    d_ff state_ff (
+        .d(next_state),
+        .clk(clk),
+        .reset(reset),
+        .q(current_state)
+    );
+
+    // FSM next state logic
+    always_comb begin
+        // Default values for outputs
+        win = 1'b0;
+        d = 1'b0;
+        sw = 1'b0;
+        next_state = current_state;
+
+        case (current_state)
+            S0: begin // Cave of Cacophony
+                if (reset) next_state = S0;
+                else if (e) next_state = S1; // East to Twisty Tunnel
+            end
+
+            S1: begin // Twisty Tunnel
+                if (reset) next_state = S0;
+                else if (w) next_state = S0;   // West to Cave of Cacophony
+                else if (s) next_state = S2;   // South to Rapid River
+            end
+
+            S2: begin // Rapid River
+                if (reset) next_state = S0;
+                else if (w) next_state = S1;   // West to Twisty Tunnel
+                else if (s && e) next_state = S4; // South-East to Dragon's Den
+                else if (e) next_state = S3;   // East to Secret Sword Stash
+            end
+
+            S3: begin // Secret Sword Stash
+                if (reset) next_state = S0;
+                else sw = 1'b1;  // Assert sword found
+                next_state = S2; // Return to Rapid River after sword is found
+            end
+
+            S4: begin // Dragon's Den
+                if (reset) next_state = S0;
+                else if (v) next_state = S5; // Victory Vault if sword is found
+                else next_state = S6;        // Grievous Graveyard if no sword
+            end
+
+            S5: begin // Victory Vault
+                win = 1'b1;  // Assert win in Victory Vault
+            end
+
+            S6: begin // Grievous Graveyard
+                d = 1'b1;  // Assert dead in Grievous Graveyard
+            end
+
+            default: next_state = S0; // Default back to Cave on error
+        endcase
+    end
+
+endmodule

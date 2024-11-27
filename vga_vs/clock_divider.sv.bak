@@ -1,0 +1,18 @@
+module clock_divider (
+	input logic clk_in,      // Input clock
+	output logic clk_out     // Output divided clock
+);
+
+	logic [31:0] counter; // Counter will count up to 2
+		
+	// This module divides the clock signal by 2. This creates an output signal of 25 Mhz. 
+	always_ff @(posedge clk_in) begin
+		if (counter == 1) begin
+			clk_out <= ~clk_out;  // Toggle the clock output
+			counter <= 0;         // Reset the counter
+		end else begin
+			counter <= counter + 1;
+		end
+	end
+
+endmodule
