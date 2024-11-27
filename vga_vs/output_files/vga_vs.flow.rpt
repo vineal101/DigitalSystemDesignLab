@@ -1,5 +1,5 @@
 Flow report for vga_vs
-Tue Nov 26 18:59:27 2024
+Wed Nov 27 17:17:55 2024
 Quartus II 64-Bit Version 15.0.2 Build 153 07/15/2015 SJ Web Edition
 
 
@@ -41,18 +41,18 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Tue Nov 26 18:59:27 2024      ;
+; Flow Status                        ; Successful - Wed Nov 27 17:17:55 2024      ;
 ; Quartus II 64-Bit Version          ; 15.0.2 Build 153 07/15/2015 SJ Web Edition ;
 ; Revision Name                      ; vga_vs                                     ;
 ; Top-level Entity Name              ; top                                        ;
 ; Family                             ; Cyclone IV E                               ;
 ; Device                             ; EP4CE115F29C7                              ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 139 / 114,480 ( < 1 % )                    ;
-;     Total combinational functions  ; 135 / 114,480 ( < 1 % )                    ;
-;     Dedicated logic registers      ; 80 / 114,480 ( < 1 % )                     ;
-; Total registers                    ; 80                                         ;
-; Total pins                         ; 30 / 529 ( 6 % )                           ;
+; Total logic elements               ; 1,683 / 114,480 ( 1 % )                    ;
+;     Total combinational functions  ; 1,682 / 114,480 ( 1 % )                    ;
+;     Dedicated logic registers      ; 89 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 89                                         ;
+; Total pins                         ; 35 / 529 ( 7 % )                           ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                      ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                            ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/26/2024 18:58:52 ;
+; Start date & time ; 11/27/2024 17:17:08 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; vga_vs              ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 0.173266553219171      ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 0.173274582805478      ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                   ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL) ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                     ; --            ; --          ; --             ;
@@ -95,12 +95,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:08     ; 1.0                     ; 923 MB              ; 00:00:21                           ;
-; Fitter                    ; 00:00:14     ; 1.0                     ; 1274 MB             ; 00:00:15                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 838 MB              ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 941 MB              ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 1088 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:28     ; --                      ; --                  ; 00:00:42                           ;
+; Analysis & Synthesis      ; 00:00:12     ; 1.0                     ; 971 MB              ; 00:00:23                           ;
+; Fitter                    ; 00:00:21     ; 1.0                     ; 1282 MB             ; 00:00:21                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 844 MB              ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 967 MB              ; 00:00:04                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 1100 MB             ; 00:00:02                           ;
+; Total                     ; 00:00:41     ; --                      ; --                  ; 00:00:53                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -109,11 +109,11 @@ agreement for further details.
 +---------------------------+------------------+----------------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
 +---------------------------+------------------+----------------+------------+----------------+
-; Analysis & Synthesis      ; ece45            ; Ubuntu 20.04.2 ; 20         ; x86_64         ;
-; Fitter                    ; ece45            ; Ubuntu 20.04.2 ; 20         ; x86_64         ;
-; Assembler                 ; ece45            ; Ubuntu 20.04.2 ; 20         ; x86_64         ;
-; TimeQuest Timing Analyzer ; ece45            ; Ubuntu 20.04.2 ; 20         ; x86_64         ;
-; EDA Netlist Writer        ; ece45            ; Ubuntu 20.04.2 ; 20         ; x86_64         ;
+; Analysis & Synthesis      ; ece43            ; Ubuntu 20.04.2 ; 20         ; x86_64         ;
+; Fitter                    ; ece43            ; Ubuntu 20.04.2 ; 20         ; x86_64         ;
+; Assembler                 ; ece43            ; Ubuntu 20.04.2 ; 20         ; x86_64         ;
+; TimeQuest Timing Analyzer ; ece43            ; Ubuntu 20.04.2 ; 20         ; x86_64         ;
+; EDA Netlist Writer        ; ece43            ; Ubuntu 20.04.2 ; 20         ; x86_64         ;
 +---------------------------+------------------+----------------+------------+----------------+
 
 
