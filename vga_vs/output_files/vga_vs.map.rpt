@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vga_vs
-Mon Dec  2 18:41:24 2024
+Mon Dec  2 20:49:11 2024
 Quartus II 64-Bit Version 15.0.2 Build 153 07/15/2015 SJ Web Edition
 
 
@@ -16,12 +16,15 @@ Quartus II 64-Bit Version 15.0.2 Build 153 07/15/2015 SJ Web Edition
   8. Registers Removed During Synthesis
   9. General Register Statistics
  10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
- 12. Parameter Settings for Inferred Entity Instance: lpm_divide:Div1
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
- 16. Analysis & Synthesis Suppressed Messages
+ 11. Parameter Settings for Inferred Entity Instance: display_generator:color_gen|lpm_divide:Div0
+ 12. Parameter Settings for Inferred Entity Instance: display_generator:color_gen|lpm_divide:Div1
+ 13. Port Connectivity Checks: "display_generator:color_gen"
+ 14. Port Connectivity Checks: "in_display_area_check:display_area"
+ 15. Port Connectivity Checks: "box_logic:box_logic"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
+ 19. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -48,13 +51,13 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Dec  2 18:41:24 2024      ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec  2 20:49:11 2024      ;
 ; Quartus II 64-Bit Version          ; 15.0.2 Build 153 07/15/2015 SJ Web Edition ;
 ; Revision Name                      ; vga_vs                                     ;
 ; Top-level Entity Name              ; top                                        ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 2,633                                      ;
-;     Total combinational functions  ; 2,633                                      ;
+; Total logic elements               ; 2,631                                      ;
+;     Total combinational functions  ; 2,631                                      ;
 ;     Dedicated logic registers      ; 95                                         ;
 ; Total registers                    ; 95                                         ;
 ; Total pins                         ; 36                                         ;
@@ -171,6 +174,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; vga_sync.sv                      ; yes             ; User SystemVerilog HDL File  ; /home/user/DigitalSystemDesignLab/vga_vs/vga_sync.sv                           ;         ;
 ; clock_divider.sv                 ; yes             ; User SystemVerilog HDL File  ; /home/user/DigitalSystemDesignLab/vga_vs/clock_divider.sv                      ;         ;
 ; top.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/user/DigitalSystemDesignLab/vga_vs/top.sv                                ;         ;
+; box_logic.sv                     ; yes             ; User SystemVerilog HDL File  ; /home/user/DigitalSystemDesignLab/vga_vs/box_logic.sv                          ;         ;
+; display_generator.sv             ; yes             ; User SystemVerilog HDL File  ; /home/user/DigitalSystemDesignLab/vga_vs/display_generator.sv                  ;         ;
+; in_display_area_check.sv         ; yes             ; User SystemVerilog HDL File  ; /home/user/DigitalSystemDesignLab/vga_vs/in_display_area_check.sv              ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; /home/software/altera/15.0/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; /home/software/altera/15.0/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; /home/software/altera/15.0/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
@@ -183,72 +189,69 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                                                            ;
-+---------------------------------------------+----------------------------------------------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                                                    ;
-+---------------------------------------------+----------------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 2,633                                                                                                    ;
-;                                             ;                                                                                                          ;
-; Total combinational functions               ; 2633                                                                                                     ;
-; Logic element usage by number of LUT inputs ;                                                                                                          ;
-;     -- 4 input functions                    ; 786                                                                                                      ;
-;     -- 3 input functions                    ; 842                                                                                                      ;
-;     -- <=2 input functions                  ; 1005                                                                                                     ;
-;                                             ;                                                                                                          ;
-; Logic elements by mode                      ;                                                                                                          ;
-;     -- normal mode                          ; 1665                                                                                                     ;
-;     -- arithmetic mode                      ; 968                                                                                                      ;
-;                                             ;                                                                                                          ;
-; Total registers                             ; 95                                                                                                       ;
-;     -- Dedicated logic registers            ; 95                                                                                                       ;
-;     -- I/O registers                        ; 0                                                                                                        ;
-;                                             ;                                                                                                          ;
-; I/O pins                                    ; 36                                                                                                       ;
-;                                             ;                                                                                                          ;
-; Embedded Multiplier 9-bit elements          ; 0                                                                                                        ;
-;                                             ;                                                                                                          ;
-; Maximum fan-out node                        ; lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider|op_21~60 ;
-; Maximum fan-out                             ; 91                                                                                                       ;
-; Total fan-out                               ; 7859                                                                                                     ;
-; Average fan-out                             ; 2.81                                                                                                     ;
-+---------------------------------------------+----------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                                                                        ;
++---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                                                                                ;
++---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Total logic elements              ; 2,631                                                                                                                                ;
+;                                             ;                                                                                                                                      ;
+; Total combinational functions               ; 2631                                                                                                                                 ;
+; Logic element usage by number of LUT inputs ;                                                                                                                                      ;
+;     -- 4 input functions                    ; 786                                                                                                                                  ;
+;     -- 3 input functions                    ; 844                                                                                                                                  ;
+;     -- <=2 input functions                  ; 1001                                                                                                                                 ;
+;                                             ;                                                                                                                                      ;
+; Logic elements by mode                      ;                                                                                                                                      ;
+;     -- normal mode                          ; 1665                                                                                                                                 ;
+;     -- arithmetic mode                      ; 966                                                                                                                                  ;
+;                                             ;                                                                                                                                      ;
+; Total registers                             ; 95                                                                                                                                   ;
+;     -- Dedicated logic registers            ; 95                                                                                                                                   ;
+;     -- I/O registers                        ; 0                                                                                                                                    ;
+;                                             ;                                                                                                                                      ;
+; I/O pins                                    ; 36                                                                                                                                   ;
+;                                             ;                                                                                                                                      ;
+; Embedded Multiplier 9-bit elements          ; 0                                                                                                                                    ;
+;                                             ;                                                                                                                                      ;
+; Maximum fan-out node                        ; display_generator:color_gen|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider|op_21~60 ;
+; Maximum fan-out                             ; 91                                                                                                                                   ;
+; Total fan-out                               ; 7857                                                                                                                                 ;
+; Average fan-out                             ; 2.81                                                                                                                                 ;
++---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                      ;
-+----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                  ; Library Name ;
-+----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+--------------+
-; |top                                   ; 2633 (197)        ; 95 (40)      ; 0           ; 0            ; 0       ; 0         ; 36   ; 0            ; |top                                                                                                 ; work         ;
-;    |clock_divider:clk_div_inst|        ; 78 (78)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clock_divider:clk_div_inst                                                                      ; work         ;
-;    |lpm_divide:Div0|                   ; 1222 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div0                                                                                 ; work         ;
-;       |lpm_divide_hkm:auto_generated|  ; 1222 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div0|lpm_divide_hkm:auto_generated                                                   ; work         ;
-;          |sign_div_unsign_9nh:divider| ; 1222 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider                       ; work         ;
-;             |alt_u_div_6af:divider|    ; 1222 (1222)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider ; work         ;
-;    |lpm_divide:Div1|                   ; 1097 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div1                                                                                 ; work         ;
-;       |lpm_divide_hkm:auto_generated|  ; 1097 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div1|lpm_divide_hkm:auto_generated                                                   ; work         ;
-;          |sign_div_unsign_9nh:divider| ; 1097 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div1|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider                       ; work         ;
-;             |alt_u_div_6af:divider|    ; 1097 (1097)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div1|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider ; work         ;
-;    |vga_sync:sync_gen|                 ; 39 (39)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|vga_sync:sync_gen                                                                               ; work         ;
-+----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                     ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                              ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |top                                      ; 2631 (1)          ; 95 (0)       ; 0           ; 0            ; 0       ; 0         ; 36   ; 0            ; |top                                                                                                                             ; work         ;
+;    |box_logic:box_logic|                  ; 59 (59)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|box_logic:box_logic                                                                                                         ; work         ;
+;    |clock_divider:clk_div_inst|           ; 78 (78)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clock_divider:clk_div_inst                                                                                                  ; work         ;
+;    |display_generator:color_gen|          ; 2451 (132)        ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|display_generator:color_gen                                                                                                 ; work         ;
+;       |lpm_divide:Div0|                   ; 1222 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|display_generator:color_gen|lpm_divide:Div0                                                                                 ; work         ;
+;          |lpm_divide_hkm:auto_generated|  ; 1222 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|display_generator:color_gen|lpm_divide:Div0|lpm_divide_hkm:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_9nh:divider| ; 1222 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|display_generator:color_gen|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider                       ; work         ;
+;                |alt_u_div_6af:divider|    ; 1222 (1222)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|display_generator:color_gen|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider ; work         ;
+;       |lpm_divide:Div1|                   ; 1097 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|display_generator:color_gen|lpm_divide:Div1                                                                                 ; work         ;
+;          |lpm_divide_hkm:auto_generated|  ; 1097 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|display_generator:color_gen|lpm_divide:Div1|lpm_divide_hkm:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_9nh:divider| ; 1097 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|display_generator:color_gen|lpm_divide:Div1|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider                       ; work         ;
+;                |alt_u_div_6af:divider|    ; 1097 (1097)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|display_generator:color_gen|lpm_divide:Div1|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider ; work         ;
+;    |in_display_area_check:display_area|   ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|in_display_area_check:display_area                                                                                          ; work         ;
+;    |vga_sync:sync_gen|                    ; 39 (39)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|vga_sync:sync_gen                                                                                                           ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------+
-; Registers Removed During Synthesis                                ;
-+---------------------------------------+---------------------------+
-; Register name                         ; Reason for Removal        ;
-+---------------------------------------+---------------------------+
-; VGA_G[1]~reg0                         ; Merged with VGA_G[0]~reg0 ;
-; VGA_G[2]~reg0                         ; Merged with VGA_G[0]~reg0 ;
-; VGA_G[3]~reg0                         ; Merged with VGA_G[0]~reg0 ;
-; VGA_G[4]~reg0                         ; Merged with VGA_G[0]~reg0 ;
-; VGA_G[5]~reg0                         ; Merged with VGA_G[0]~reg0 ;
-; VGA_G[6]~reg0                         ; Merged with VGA_G[0]~reg0 ;
-; VGA_G[7]~reg0                         ; Merged with VGA_G[0]~reg0 ;
-; Total Number of Removed Registers = 7 ;                           ;
-+---------------------------------------+---------------------------+
++--------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                         ;
++-----------------------------------------+--------------------------------------------------+
+; Register name                           ; Reason for Removal                               ;
++-----------------------------------------+--------------------------------------------------+
+; display_generator:color_gen|VGA_G[1..7] ; Merged with display_generator:color_gen|VGA_G[0] ;
+; Total Number of Removed Registers = 7   ;                                                  ;
++-----------------------------------------+--------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -272,56 +275,123 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 ; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|clock_divider:clk_div_inst|counter_down[8] ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |top|box_x_pos[2]                               ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |top|box_y_pos[7]                               ;
-; 9:1                ; 16 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |top|VGA_B[7]~reg0                              ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |top|box_logic:box_logic|box_x_pos[2]           ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |top|box_logic:box_logic|box_y_pos[7]           ;
+; 9:1                ; 16 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |top|display_generator:color_gen|VGA_B[7]       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 
 
-+------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
-+------------------------+----------------+------------------------+
-; Parameter Name         ; Value          ; Type                   ;
-+------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                ;
-; LPM_WIDTHD             ; 32             ; Untyped                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_PIPELINE           ; 0              ; Untyped                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_hkm ; Untyped                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
-+------------------------+----------------+------------------------+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: display_generator:color_gen|lpm_divide:Div0 ;
++------------------------+----------------+----------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                               ;
++------------------------+----------------+----------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                            ;
+; LPM_WIDTHD             ; 32             ; Untyped                                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                            ;
+; CBXI_PARAMETER         ; lpm_divide_hkm ; Untyped                                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                     ;
++------------------------+----------------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_divide:Div1 ;
-+------------------------+----------------+------------------------+
-; Parameter Name         ; Value          ; Type                   ;
-+------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                ;
-; LPM_WIDTHD             ; 32             ; Untyped                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_PIPELINE           ; 0              ; Untyped                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_hkm ; Untyped                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
-+------------------------+----------------+------------------------+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: display_generator:color_gen|lpm_divide:Div1 ;
++------------------------+----------------+----------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                               ;
++------------------------+----------------+----------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                            ;
+; LPM_WIDTHD             ; 32             ; Untyped                                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                            ;
+; CBXI_PARAMETER         ; lpm_divide_hkm ; Untyped                                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                     ;
++------------------------+----------------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "display_generator:color_gen" ;
++------------------+-------+----------+-------------------+
+; Port             ; Type  ; Severity ; Details           ;
++------------------+-------+----------+-------------------+
+; max_x[6..0]      ; Input ; Info     ; Stuck at GND      ;
+; max_x[9]         ; Input ; Info     ; Stuck at VCC      ;
+; max_x[8]         ; Input ; Info     ; Stuck at GND      ;
+; max_x[7]         ; Input ; Info     ; Stuck at VCC      ;
+; max_y[8..5]      ; Input ; Info     ; Stuck at VCC      ;
+; max_y[4..0]      ; Input ; Info     ; Stuck at GND      ;
+; max_y[9]         ; Input ; Info     ; Stuck at GND      ;
+; box_width[5..4]  ; Input ; Info     ; Stuck at VCC      ;
+; box_width[9..6]  ; Input ; Info     ; Stuck at GND      ;
+; box_width[3..2]  ; Input ; Info     ; Stuck at GND      ;
+; box_width[1]     ; Input ; Info     ; Stuck at VCC      ;
+; box_width[0]     ; Input ; Info     ; Stuck at GND      ;
+; box_height[5..4] ; Input ; Info     ; Stuck at VCC      ;
+; box_height[9..6] ; Input ; Info     ; Stuck at GND      ;
+; box_height[3..2] ; Input ; Info     ; Stuck at GND      ;
+; box_height[1]    ; Input ; Info     ; Stuck at VCC      ;
+; box_height[0]    ; Input ; Info     ; Stuck at GND      ;
++------------------+-------+----------+-------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "in_display_area_check:display_area" ;
++-------------+-------+----------+-------------------------------+
+; Port        ; Type  ; Severity ; Details                       ;
++-------------+-------+----------+-------------------------------+
+; max_x[6..0] ; Input ; Info     ; Stuck at GND                  ;
+; max_x[9]    ; Input ; Info     ; Stuck at VCC                  ;
+; max_x[8]    ; Input ; Info     ; Stuck at GND                  ;
+; max_x[7]    ; Input ; Info     ; Stuck at VCC                  ;
+; max_y[8..5] ; Input ; Info     ; Stuck at VCC                  ;
+; max_y[4..0] ; Input ; Info     ; Stuck at GND                  ;
+; max_y[9]    ; Input ; Info     ; Stuck at GND                  ;
++-------------+-------+----------+-------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "box_logic:box_logic"                                                                            ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; max_x[6..0]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; max_x[9]         ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; max_x[8]         ; Input  ; Info     ; Stuck at GND                                                                        ;
+; max_x[7]         ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; max_y[8..5]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; max_y[4..0]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; max_y[9]         ; Input  ; Info     ; Stuck at GND                                                                        ;
+; box_width[5..4]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; box_width[9..6]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; box_width[3..2]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; box_width[1]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; box_width[0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; box_height[5..4] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; box_height[9..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; box_height[3..2] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; box_height[1]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; box_height[0]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; x_dir            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; y_dir            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -333,11 +403,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; cycloneiii_ff         ; 95                          ;
 ;     ENA               ; 26                          ;
 ;     plain             ; 69                          ;
-; cycloneiii_lcell_comb ; 2634                        ;
-;     arith             ; 968                         ;
+; cycloneiii_lcell_comb ; 2632                        ;
+;     arith             ; 966                         ;
 ;         1 data inputs ; 14                          ;
-;         2 data inputs ; 139                         ;
-;         3 data inputs ; 815                         ;
+;         2 data inputs ; 135                         ;
+;         3 data inputs ; 817                         ;
 ;     normal            ; 1666                        ;
 ;         0 data inputs ; 41                          ;
 ;         1 data inputs ; 8                           ;
@@ -346,7 +416,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         4 data inputs ; 786                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 81.40                       ;
-; Average LUT depth     ; 66.53                       ;
+; Average LUT depth     ; 66.59                       ;
 +-----------------------+-----------------------------+
 
 
@@ -365,7 +435,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.2 Build 153 07/15/2015 SJ Web Edition
-    Info: Processing started: Mon Dec  2 18:41:08 2024
+    Info: Processing started: Mon Dec  2 20:48:55 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga_vs -c vga_vs
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file hsync.sv
@@ -378,24 +448,33 @@ Info (12021): Found 1 design units, including 1 entities, in source file clock_d
     Info (12023): Found entity 1: clock_divider
 Info (12021): Found 1 design units, including 1 entities, in source file top.sv
     Info (12023): Found entity 1: top
+Info (12021): Found 1 design units, including 1 entities, in source file box_logic.sv
+    Info (12023): Found entity 1: box_logic
+Info (12021): Found 1 design units, including 1 entities, in source file display_generator.sv
+    Info (12023): Found entity 1: display_generator
+Info (12021): Found 1 design units, including 1 entities, in source file in_display_area_check.sv
+    Info (12023): Found entity 1: in_display_area_check
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at top.sv(68): truncated value with size 32 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at top.sv(69): truncated value with size 32 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at top.sv(81): truncated value with size 32 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at top.sv(87): truncated value with size 32 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at top.sv(95): truncated value with size 32 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at top.sv(101): truncated value with size 32 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at top.sv(120): truncated value with size 32 to match size of target (8)
-Warning (10230): Verilog HDL assignment warning at top.sv(122): truncated value with size 32 to match size of target (8)
 Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:clk_div_inst"
 Info (12128): Elaborating entity "vga_sync" for hierarchy "vga_sync:sync_gen"
 Warning (10230): Verilog HDL assignment warning at vga_sync.sv(17): truncated value with size 32 to match size of target (10)
 Warning (10230): Verilog HDL assignment warning at vga_sync.sv(33): truncated value with size 32 to match size of target (10)
+Info (12128): Elaborating entity "box_logic" for hierarchy "box_logic:box_logic"
+Warning (10230): Verilog HDL assignment warning at box_logic.sv(18): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at box_logic.sv(19): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at box_logic.sv(29): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at box_logic.sv(34): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at box_logic.sv(42): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at box_logic.sv(47): truncated value with size 32 to match size of target (10)
+Info (12128): Elaborating entity "in_display_area_check" for hierarchy "in_display_area_check:display_area"
+Info (12128): Elaborating entity "display_generator" for hierarchy "display_generator:color_gen"
+Warning (10230): Verilog HDL assignment warning at display_generator.sv(34): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at display_generator.sv(36): truncated value with size 32 to match size of target (8)
 Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0"
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div1"
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0"
-Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter:
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "display_generator:color_gen|Div0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "display_generator:color_gen|Div1"
+Info (12130): Elaborated megafunction instantiation "display_generator:color_gen|lpm_divide:Div0"
+Info (12133): Instantiated megafunction "display_generator:color_gen|lpm_divide:Div0" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -410,27 +489,27 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
     Info (12023): Found entity 1: add_sub_7pc
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
     Info (12023): Found entity 1: add_sub_8pc
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div1"
-Info (12133): Instantiated megafunction "lpm_divide:Div1" with the following parameter:
+Info (12130): Elaborated megafunction instantiation "display_generator:color_gen|lpm_divide:Div1"
+Info (12133): Instantiated megafunction "display_generator:color_gen|lpm_divide:Div1" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (286030): Timing-Driven Synthesis is running
 Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "lpm_divide:Div1|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider|op_7~16"
+    Info (17048): Logic cell "display_generator:color_gen|lpm_divide:Div1|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider|op_7~16"
 Info (144001): Generated suppressed messages file /home/user/DigitalSystemDesignLab/vga_vs/output_files/vga_vs.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2670 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2668 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 2634 logic cells
+    Info (21061): Implemented 2632 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 1007 megabytes
-    Info: Processing ended: Mon Dec  2 18:41:24 2024
+    Info: Peak virtual memory: 1009 megabytes
+    Info: Processing ended: Mon Dec  2 20:49:11 2024
     Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:29
+    Info: Total CPU time (on all processors): 00:00:28
 
 
 +------------------------------------------+
