@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vga_vs
-Wed Nov 27 17:17:20 2024
+Mon Dec  2 18:41:24 2024
 Quartus II 64-Bit Version 15.0.2 Build 153 07/15/2015 SJ Web Edition
 
 
@@ -48,16 +48,16 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 27 17:17:20 2024      ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec  2 18:41:24 2024      ;
 ; Quartus II 64-Bit Version          ; 15.0.2 Build 153 07/15/2015 SJ Web Edition ;
 ; Revision Name                      ; vga_vs                                     ;
 ; Top-level Entity Name              ; top                                        ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 1,682                                      ;
-;     Total combinational functions  ; 1,682                                      ;
-;     Dedicated logic registers      ; 89                                         ;
-; Total registers                    ; 89                                         ;
-; Total pins                         ; 35                                         ;
+; Total logic elements               ; 2,633                                      ;
+;     Total combinational functions  ; 2,633                                      ;
+;     Dedicated logic registers      ; 95                                         ;
+; Total registers                    ; 95                                         ;
+; Total pins                         ; 36                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -168,18 +168,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                   ; Library ;
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
-; vga_sync.sv                      ; yes             ; User SystemVerilog HDL File  ; /home/user/Downloads/DigitalSystemDesignLab/vga_vs/vga_sync.sv                 ;         ;
-; clock_divider.sv                 ; yes             ; User SystemVerilog HDL File  ; /home/user/Downloads/DigitalSystemDesignLab/vga_vs/clock_divider.sv            ;         ;
-; top.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/user/Downloads/DigitalSystemDesignLab/vga_vs/top.sv                      ;         ;
+; vga_sync.sv                      ; yes             ; User SystemVerilog HDL File  ; /home/user/DigitalSystemDesignLab/vga_vs/vga_sync.sv                           ;         ;
+; clock_divider.sv                 ; yes             ; User SystemVerilog HDL File  ; /home/user/DigitalSystemDesignLab/vga_vs/clock_divider.sv                      ;         ;
+; top.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/user/DigitalSystemDesignLab/vga_vs/top.sv                                ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; /home/software/altera/15.0/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; /home/software/altera/15.0/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; /home/software/altera/15.0/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
 ; aglobal150.inc                   ; yes             ; Megafunction                 ; /home/software/altera/15.0/quartus/libraries/megafunctions/aglobal150.inc      ;         ;
-; db/lpm_divide_hkm.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/user/Downloads/DigitalSystemDesignLab/vga_vs/db/lpm_divide_hkm.tdf       ;         ;
-; db/sign_div_unsign_9nh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/user/Downloads/DigitalSystemDesignLab/vga_vs/db/sign_div_unsign_9nh.tdf  ;         ;
-; db/alt_u_div_6af.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/user/Downloads/DigitalSystemDesignLab/vga_vs/db/alt_u_div_6af.tdf        ;         ;
-; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/user/Downloads/DigitalSystemDesignLab/vga_vs/db/add_sub_7pc.tdf          ;         ;
-; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/user/Downloads/DigitalSystemDesignLab/vga_vs/db/add_sub_8pc.tdf          ;         ;
+; db/lpm_divide_hkm.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/user/DigitalSystemDesignLab/vga_vs/db/lpm_divide_hkm.tdf                 ;         ;
+; db/sign_div_unsign_9nh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/user/DigitalSystemDesignLab/vga_vs/db/sign_div_unsign_9nh.tdf            ;         ;
+; db/alt_u_div_6af.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/user/DigitalSystemDesignLab/vga_vs/db/alt_u_div_6af.tdf                  ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/user/DigitalSystemDesignLab/vga_vs/db/add_sub_7pc.tdf                    ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/user/DigitalSystemDesignLab/vga_vs/db/add_sub_8pc.tdf                    ;         ;
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
 
 
@@ -188,30 +188,30 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                                    ;
 +---------------------------------------------+----------------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 1,682                                                                                                    ;
+; Estimated Total logic elements              ; 2,633                                                                                                    ;
 ;                                             ;                                                                                                          ;
-; Total combinational functions               ; 1682                                                                                                     ;
+; Total combinational functions               ; 2633                                                                                                     ;
 ; Logic element usage by number of LUT inputs ;                                                                                                          ;
-;     -- 4 input functions                    ; 499                                                                                                      ;
-;     -- 3 input functions                    ; 499                                                                                                      ;
-;     -- <=2 input functions                  ; 684                                                                                                      ;
+;     -- 4 input functions                    ; 786                                                                                                      ;
+;     -- 3 input functions                    ; 842                                                                                                      ;
+;     -- <=2 input functions                  ; 1005                                                                                                     ;
 ;                                             ;                                                                                                          ;
 ; Logic elements by mode                      ;                                                                                                          ;
-;     -- normal mode                          ; 1074                                                                                                     ;
-;     -- arithmetic mode                      ; 608                                                                                                      ;
+;     -- normal mode                          ; 1665                                                                                                     ;
+;     -- arithmetic mode                      ; 968                                                                                                      ;
 ;                                             ;                                                                                                          ;
-; Total registers                             ; 89                                                                                                       ;
-;     -- Dedicated logic registers            ; 89                                                                                                       ;
+; Total registers                             ; 95                                                                                                       ;
+;     -- Dedicated logic registers            ; 95                                                                                                       ;
 ;     -- I/O registers                        ; 0                                                                                                        ;
 ;                                             ;                                                                                                          ;
-; I/O pins                                    ; 35                                                                                                       ;
+; I/O pins                                    ; 36                                                                                                       ;
 ;                                             ;                                                                                                          ;
 ; Embedded Multiplier 9-bit elements          ; 0                                                                                                        ;
 ;                                             ;                                                                                                          ;
-; Maximum fan-out node                        ; lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider|op_13~44 ;
-; Maximum fan-out                             ; 67                                                                                                       ;
-; Total fan-out                               ; 5059                                                                                                     ;
-; Average fan-out                             ; 2.75                                                                                                     ;
+; Maximum fan-out node                        ; lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider|op_21~60 ;
+; Maximum fan-out                             ; 91                                                                                                       ;
+; Total fan-out                               ; 7859                                                                                                     ;
+; Average fan-out                             ; 2.81                                                                                                     ;
 +---------------------------------------------+----------------------------------------------------------------------------------------------------------+
 
 
@@ -220,17 +220,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                  ; Library Name ;
 +----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+--------------+
-; |top                                   ; 1682 (134)        ; 89 (34)      ; 0           ; 0            ; 0       ; 0         ; 35   ; 0            ; |top                                                                                                 ; work         ;
+; |top                                   ; 2633 (197)        ; 95 (40)      ; 0           ; 0            ; 0       ; 0         ; 36   ; 0            ; |top                                                                                                 ; work         ;
 ;    |clock_divider:clk_div_inst|        ; 78 (78)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clock_divider:clk_div_inst                                                                      ; work         ;
-;    |lpm_divide:Div0|                   ; 702 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div0                                                                                 ; work         ;
-;       |lpm_divide_hkm:auto_generated|  ; 702 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div0|lpm_divide_hkm:auto_generated                                                   ; work         ;
-;          |sign_div_unsign_9nh:divider| ; 702 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider                       ; work         ;
-;             |alt_u_div_6af:divider|    ; 702 (702)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider ; work         ;
-;    |lpm_divide:Div1|                   ; 730 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div1                                                                                 ; work         ;
-;       |lpm_divide_hkm:auto_generated|  ; 730 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div1|lpm_divide_hkm:auto_generated                                                   ; work         ;
-;          |sign_div_unsign_9nh:divider| ; 730 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div1|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider                       ; work         ;
-;             |alt_u_div_6af:divider|    ; 730 (730)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div1|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider ; work         ;
-;    |vga_sync:sync_gen|                 ; 38 (38)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|vga_sync:sync_gen                                                                               ; work         ;
+;    |lpm_divide:Div0|                   ; 1222 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div0                                                                                 ; work         ;
+;       |lpm_divide_hkm:auto_generated|  ; 1222 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div0|lpm_divide_hkm:auto_generated                                                   ; work         ;
+;          |sign_div_unsign_9nh:divider| ; 1222 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider                       ; work         ;
+;             |alt_u_div_6af:divider|    ; 1222 (1222)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider ; work         ;
+;    |lpm_divide:Div1|                   ; 1097 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div1                                                                                 ; work         ;
+;       |lpm_divide_hkm:auto_generated|  ; 1097 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div1|lpm_divide_hkm:auto_generated                                                   ; work         ;
+;          |sign_div_unsign_9nh:divider| ; 1097 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div1|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider                       ; work         ;
+;             |alt_u_div_6af:divider|    ; 1097 (1097)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div1|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider ; work         ;
+;    |vga_sync:sync_gen|                 ; 39 (39)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|vga_sync:sync_gen                                                                               ; work         ;
 +----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -240,13 +240,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+---------------------------+
 ; Register name                         ; Reason for Removal        ;
 +---------------------------------------+---------------------------+
-; VGA_B[1]~reg0                         ; Merged with VGA_B[0]~reg0 ;
-; VGA_B[2]~reg0                         ; Merged with VGA_B[0]~reg0 ;
-; VGA_B[3]~reg0                         ; Merged with VGA_B[0]~reg0 ;
-; VGA_B[4]~reg0                         ; Merged with VGA_B[0]~reg0 ;
-; VGA_B[5]~reg0                         ; Merged with VGA_B[0]~reg0 ;
-; VGA_B[6]~reg0                         ; Merged with VGA_B[0]~reg0 ;
-; VGA_B[7]~reg0                         ; Merged with VGA_B[0]~reg0 ;
+; VGA_G[1]~reg0                         ; Merged with VGA_G[0]~reg0 ;
+; VGA_G[2]~reg0                         ; Merged with VGA_G[0]~reg0 ;
+; VGA_G[3]~reg0                         ; Merged with VGA_G[0]~reg0 ;
+; VGA_G[4]~reg0                         ; Merged with VGA_G[0]~reg0 ;
+; VGA_G[5]~reg0                         ; Merged with VGA_G[0]~reg0 ;
+; VGA_G[6]~reg0                         ; Merged with VGA_G[0]~reg0 ;
+; VGA_G[7]~reg0                         ; Merged with VGA_G[0]~reg0 ;
 ; Total Number of Removed Registers = 7 ;                           ;
 +---------------------------------------+---------------------------+
 
@@ -256,12 +256,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 89    ;
-; Number of registers using Synchronous Clear  ; 1     ;
+; Total registers                              ; 95    ;
+; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 42    ;
+; Number of registers using Clock Enable       ; 26    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -271,8 +271,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|clock_divider:clk_div_inst|counter_down[9] ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |top|VGA_R[0]~reg0                              ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|clock_divider:clk_div_inst|counter_down[8] ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |top|box_x_pos[2]                               ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |top|box_y_pos[7]                               ;
+; 9:1                ; 16 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |top|VGA_B[7]~reg0                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 
 
@@ -327,25 +329,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 35                          ;
-; cycloneiii_ff         ; 89                          ;
-;     ENA               ; 42                          ;
-;     SCLR              ; 1                           ;
-;     plain             ; 46                          ;
-; cycloneiii_lcell_comb ; 1682                        ;
-;     arith             ; 608                         ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 113                         ;
-;         3 data inputs ; 493                         ;
-;     normal            ; 1074                        ;
-;         0 data inputs ; 33                          ;
-;         1 data inputs ; 19                          ;
-;         2 data inputs ; 517                         ;
-;         3 data inputs ; 6                           ;
-;         4 data inputs ; 499                         ;
+; boundary_port         ; 36                          ;
+; cycloneiii_ff         ; 95                          ;
+;     ENA               ; 26                          ;
+;     plain             ; 69                          ;
+; cycloneiii_lcell_comb ; 2634                        ;
+;     arith             ; 968                         ;
+;         1 data inputs ; 14                          ;
+;         2 data inputs ; 139                         ;
+;         3 data inputs ; 815                         ;
+;     normal            ; 1666                        ;
+;         0 data inputs ; 41                          ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 804                         ;
+;         3 data inputs ; 27                          ;
+;         4 data inputs ; 786                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 59.60                       ;
-; Average LUT depth     ; 50.36                       ;
+; Max LUT depth         ; 81.40                       ;
+; Average LUT depth     ; 66.53                       ;
 +-----------------------+-----------------------------+
 
 
@@ -354,7 +355,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:07     ;
 +----------------+--------------+
 
 
@@ -364,7 +365,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.2 Build 153 07/15/2015 SJ Web Edition
-    Info: Processing started: Wed Nov 27 17:17:08 2024
+    Info: Processing started: Mon Dec  2 18:41:08 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga_vs -c vga_vs
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file hsync.sv
@@ -378,12 +379,18 @@ Info (12021): Found 1 design units, including 1 entities, in source file clock_d
 Info (12021): Found 1 design units, including 1 entities, in source file top.sv
     Info (12023): Found entity 1: top
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at top.sv(63): truncated value with size 32 to match size of target (16)
-Warning (10230): Verilog HDL assignment warning at top.sv(64): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at top.sv(68): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at top.sv(69): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at top.sv(81): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at top.sv(87): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at top.sv(95): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at top.sv(101): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at top.sv(120): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at top.sv(122): truncated value with size 32 to match size of target (8)
 Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:clk_div_inst"
 Info (12128): Elaborating entity "vga_sync" for hierarchy "vga_sync:sync_gen"
-Warning (10230): Verilog HDL assignment warning at vga_sync.sv(18): truncated value with size 32 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at vga_sync.sv(36): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at vga_sync.sv(17): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at vga_sync.sv(33): truncated value with size 32 to match size of target (10)
 Info (278001): Inferred 2 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div1"
@@ -410,23 +417,25 @@ Info (12133): Instantiated megafunction "lpm_divide:Div1" with the following par
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file /home/user/Downloads/DigitalSystemDesignLab/vga_vs/output_files/vga_vs.map.smsg
+Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "lpm_divide:Div1|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider|op_7~16"
+Info (144001): Generated suppressed messages file /home/user/DigitalSystemDesignLab/vga_vs/output_files/vga_vs.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1717 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 6 input pins
+Info (21057): Implemented 2670 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 1682 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 1004 megabytes
-    Info: Processing ended: Wed Nov 27 17:17:20 2024
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:23
+    Info (21061): Implemented 2634 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 1007 megabytes
+    Info: Processing ended: Mon Dec  2 18:41:24 2024
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:29
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in /home/user/Downloads/DigitalSystemDesignLab/vga_vs/output_files/vga_vs.map.smsg.
+The suppressed messages can be found in /home/user/DigitalSystemDesignLab/vga_vs/output_files/vga_vs.map.smsg.
 
 

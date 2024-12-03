@@ -7,15 +7,15 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/home/user/Downloads/vga_vs/simulation/qsim
+d/home/user/Downloads/vga_vs/simulation/qsim
 vtop
-Z1 !s110 1732664805
+Z0 !s110 1733183271
 !i10b 1
-!s100 f>onHGlE<lbDn>8L_FXgf0
-IAI=R2bWS0JQC3@Qd]5=373
-Z2 V`JN@9S9cnhjKRR_L]QIcM3
-R0
-w1732664804
+!s100 9ODm;6dK?Hh;KB0eP>@`I1
+IRECS4dQYU4ehCZDT1kA5`3
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
+Z2 d/home/user/DigitalSystemDesignLab/vga_vs/simulation/qsim
+w1733183270
 8vga_vs.vo
 Fvga_vs.vo
 L0 32
@@ -23,38 +23,38 @@ Z3 OV;L;10.3d;59
 r1
 !s85 0
 31
-!s108 1732664805.074264
+!s108 1733183271.344114
 !s107 vga_vs.vo|
 !s90 -work|work|vga_vs.vo|
 !i113 1
 Z4 o-work work
 vtop_vlg_check_tst
-R1
-!i10b 1
-!s100 ;5C717BIYN]?f<9U?<<RC3
-IUIUoOND@A0e8i]IL38e]Y0
-R2
 R0
-Z5 w1732664802
-Z6 8fm.vwf.vt
-Z7 Ffm.vwf.vt
-L0 58
+!i10b 1
+!s100 K?5NjHKcEoc<WS`:EAk8N1
+Ik:cUOg7WZXFf_0A@;h9H01
+R1
+R2
+Z5 w1733183268
+Z6 8Waveform.vwf.vt
+Z7 FWaveform.vwf.vt
+L0 70
 R3
 r1
 !s85 0
 31
-Z8 !s108 1732664805.106679
-Z9 !s107 fm.vwf.vt|
-Z10 !s90 -work|work|fm.vwf.vt|
+Z8 !s108 1733183271.545369
+Z9 !s107 Waveform.vwf.vt|
+Z10 !s90 -work|work|Waveform.vwf.vt|
 !i113 1
 R4
 vtop_vlg_sample_tst
-R1
-!i10b 1
-!s100 HOleoHhFBZbaEQH`Y1m403
-IgEz0G7nd:5jXiXPZK^K1_0
-R2
 R0
+!i10b 1
+!s100 A9]`08z2?A8n6Z=llKm460
+IfGOF:NnZdJih0FaSf<ZJg0
+R1
+R2
 R5
 R6
 R7
@@ -69,16 +69,16 @@ R10
 !i113 1
 R4
 vtop_vlg_vec_tst
-R1
-!i10b 1
-!s100 FB@[2;;15Ag;[T4LX1^gn1
-Ii5@o@=DfG3daK[cdKGhRd2
-R2
 R0
+!i10b 1
+!s100 X7aA1^L5P1>4KV_mK[0^53
+I2oRDOi`B6><<QMRF2HUhI2
+R1
+R2
 R5
 R6
 R7
-L0 717
+L0 729
 R3
 r1
 !s85 0

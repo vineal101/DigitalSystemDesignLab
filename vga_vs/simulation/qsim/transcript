@@ -1,27 +1,27 @@
 # do vga_vs.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 18:46:45 on Nov 26,2024
+# Start time: 18:47:51 on Dec 02,2024
 # vlog -work work vga_vs.vo 
 # -- Compiling module top
 # 
 # Top level modules:
 # 	top
-# End time: 18:46:45 on Nov 26,2024, Elapsed time: 0:00:00
+# End time: 18:47:51 on Dec 02,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 18:46:45 on Nov 26,2024
-# vlog -work work fm.vwf.vt 
+# Start time: 18:47:51 on Dec 02,2024
+# vlog -work work Waveform.vwf.vt 
 # -- Compiling module top_vlg_sample_tst
 # -- Compiling module top_vlg_check_tst
 # -- Compiling module top_vlg_vec_tst
 # 
 # Top level modules:
 # 	top_vlg_vec_tst
-# End time: 18:46:45 on Nov 26,2024, Elapsed time: 0:00:00
+# End time: 18:47:51 on Dec 02,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -do "vga_vs.do" 
-# Start time: 18:46:45 on Nov 26,2024
+# Start time: 18:47:51 on Dec 02,2024
 # Loading work.top_vlg_vec_tst
 # Loading work.top
 # Loading cycloneive_ver.cycloneive_io_obuf
@@ -42,7 +42,7 @@
 # ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libc.so.6 : module was loaded at an absolute address.
 # ** Warning: (vsim-3116) Problem reading symbols from /lib/ld-linux.so.2 : module was loaded at an absolute address.
 # Simulation passed !
-# ** Note: $finish    : fm.vwf.vt(713)
+# ** Note: $finish    : Waveform.vwf.vt(725)
 #    Time: 1 us  Iteration: 0  Instance: /top_vlg_vec_tst/tb_out
-# End time: 18:46:45 on Nov 26,2024, Elapsed time: 0:00:00
+# End time: 18:47:51 on Dec 02,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 7
