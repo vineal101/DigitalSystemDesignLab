@@ -3,7 +3,7 @@ Repository for Digital System Design Lab and Final Project
 
 # Setup
 ```bash
-- ssh-keygen -t ed25519 -C "email"
+- ssh-keygen -t ed25519 -C ""
 - Press Enter thrice
 - Edit ssh key
 - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
